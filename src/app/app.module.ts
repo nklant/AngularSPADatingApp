@@ -5,10 +5,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { AuthService } from './_service/auth.service';
+import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-
+import { AlertifyService } from './_services/alertify.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { RegisterComponent } from './register/register.component';
     HttpModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
